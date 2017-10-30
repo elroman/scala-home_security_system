@@ -1,0 +1,8 @@
+
+GET        /                           controllers.ControlPanelController.controlPanelPage
+GET        /control-panel              controllers.ControlPanelController.controlPanelPage
+GET        /activate-security          controllers.ControlPanelController.activateSecurity
+GET        /deactivate-security        controllers.ControlPanelController.deactivateSecurity
+GET        /take-picture               controllers.ControlPanelController.takePicture
+
+GET        /assets/*file               controllers.Assets.at(path="/public", file)

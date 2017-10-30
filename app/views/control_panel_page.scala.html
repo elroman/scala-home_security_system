@@ -1,0 +1,40 @@
+@(message: String)(isActive: Boolean)
+
+@main("Control panel") {
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="wrapper wrapper-content fadeInUp">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>Control car panel</h5>
+                    </div>
+
+                    <div class="ibox-content" >
+                        <div id="control_panel" class="project-list" style="height: 500px">
+
+                            @if(!isActive) {
+                                <a href="@routes.ControlPanelController.activateSecurity()">
+                                    <button class="widget btn-primary">Activate Security</button>
+                                </a>
+                            }
+
+                            @if(isActive) {
+                                <a href="@routes.ControlPanelController.deactivateSecurity()">
+                                    <button class="widget btn-danger">Deactivate Security</button>
+                                </a>
+                            }
+
+                            <br>
+                            <a href="@routes.ControlPanelController.takePicture()">
+                                <button class="widget btn-primary">Take picture</button>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+} {
+
+}

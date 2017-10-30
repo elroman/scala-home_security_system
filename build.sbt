@@ -13,11 +13,13 @@ libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
 libraryDependencies += "com.h2database" % "h2" % "1.4.196"
 */
-
-
 libraryDependencies ++= {
 
+  val akkaV = "2.4.16"
   Seq(
+    "com.typesafe.akka" %% "akka-actor" % akkaV,
+    "com.typesafe.akka" %% "akka-slf4j" % akkaV,
+
     "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
 
     "com.pi4j" % "pi4j-core" % "1.1",
